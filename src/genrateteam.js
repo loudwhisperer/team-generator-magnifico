@@ -32,12 +32,12 @@ function engineer(data) {
         <p>${member.id}</p>
         <p>${member.email}</p>
         <p>${member.github}</p>
-        </div>);
+        </div>`);
   });
   return html.join("");
 }
 
-function teamMaker(members){
+function teamMaker(members) {
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
