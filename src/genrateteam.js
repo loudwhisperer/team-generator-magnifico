@@ -1,3 +1,4 @@
+// generates each team members info in the html file
 function manager(data){
     const html = []
     data.forEach(member => {
@@ -36,7 +37,7 @@ function engineer(data) {
   });
   return html.join("");
 }
-
+//the skeleton of the generated html file
 function teamMaker(members) {
     return `<!DOCTYPE html>
 <html lang="en">

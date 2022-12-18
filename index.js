@@ -1,3 +1,4 @@
+//application and file imports
 const fs = require('fs')
 const inquirer = require('inquirer')
 const Manager = require("./lib/Manager");
@@ -6,7 +7,7 @@ const Engineer = require("./lib/Engineer");
 const teamMaker = require("./src/genrateteam");
 
 const teamArr = []
-
+//question arrays
 const employeeType = [
     {
         type: "list",
@@ -84,7 +85,7 @@ const intern = [
     name: "school",
   },
 ];
-
+//function to add each employees set of questions after selecting the proper employee type from employeeType
 async function main(){
    const {addemployee} = await inquirer.prompt(employeeType)
    switch (addemployee){
@@ -101,14 +102,14 @@ async function main(){
         generateTeam()
     }
 }
-
+// function to generate manager
 async function promptManager(){
     const data = await inquirer.prompt(manager)
     const member = new Manager(data.name, data.id, data.email, data.officeNumber)
     teamArr.push(member)
     main()
 }
-
+//function to generate engineer
 async function promptEngineer() {
   const data = await inquirer.prompt(engineer);
   const member = new Engineer(
@@ -120,14 +121,14 @@ async function promptEngineer() {
   teamArr.push(member);
   main();
 }
-
+// function to generate intern
 async function promptIntern() {
   const data = await inquirer.prompt(intern);
   const member = new Intern(data.name, data.id, data.email, data.school);
   teamArr.push(member);
   main();
 }
-
+// function to create the team file once we select done from the first set of questions
 async function generateTeam() {
     const data = teamMaker(teamArr)
     fs.promises.writeFile('dist/index.html', data)
@@ -135,3 +136,5 @@ async function generateTeam() {
 }
 
 main()
+
+module.exports = index.js
