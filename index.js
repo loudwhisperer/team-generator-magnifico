@@ -137,4 +137,4 @@ async function generateTeam() {
 
 main()
 
-module.exports = index.js
+

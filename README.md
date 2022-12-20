@@ -12,8 +12,18 @@ I feel like the greatest lesson I learned working through this was A.)You can us
 - Once done you will have the full repo then it is just a matter of changing directories to The Team Generator Magnifico  application and using your preffered method for opening it in a code editor.
 
 ## Usage
+User can enter in info for one of three categories of employee
 
-[![Watch the video](develop/assets/pic/vids/node-index.png)](https://drive.google.com/file/d/17X6H2RQDDmUUDTmMksGqG1GuIumDKd1l/view)
+- first they will navigate to the root of Team Generator Magnifico then type node index to start the application
+- then they will enter in which employee type they want to add
+- with a choice of Engineer, Intern or Engineer
+- the user will then answer the prompts provided with the appropriate info (name, id, email etc.)
+- when they finsih they will be prompted to add another employee or click done
+- once done is clicked a index.html file will be generated in the dist folder of this application with the information added from the prompts
+
+The video below will show the tests created for this application being run and a walkthrough of the applications uses as defined above:
+
+[![Watch the video](./assets/images/screenshot%20.png)](https://drive.google.com/file/d/1nh3gUgSpdbvTu9GYYMg3tOoA8StHJoGH/view)
 
 ## License
 
